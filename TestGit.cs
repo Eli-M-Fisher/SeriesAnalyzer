@@ -5,6 +5,6 @@ class TestGit
 {
     public static void SayHi()
     {
-        Console.WriteLine("Hi from test Git file!");
+        Console.WriteLine("Hello again from Git!");
     }
 }

@@ -1,0 +1,20 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore solution-specific settings
+.vs/
+
+# Ignore Mac system files
+.DS_Store
+
+# User-specific files
+*.user
+*.suo
+
+# Auto-generated files
+*.log
+*.cache
+
+# VS Code settings (if you don't want to share them)
+.vscode/

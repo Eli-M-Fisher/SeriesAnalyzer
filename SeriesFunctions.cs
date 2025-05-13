@@ -1,4 +1,17 @@
 
+/*
+ * SeriesFunctions.cs
+ *
+ * This file contains all the core logic for analyzing the numeric series.
+ * It includes functions that calculate and print stats like max, min, average, sum,
+ * and it handles ordering, reversing, and displaying the series.
+ *
+ * These are the actual tools that do the work — this file is where the “analyzer” lives.
+ *
+ * Author: Eli Fisher
+ * Part of the Series Analyzer project – C# programming course
+ */
+
 
 using System;
 using System.Collections.Generic;
@@ -6,6 +19,10 @@ using System.Linq;
 
 public static class SeriesFunctions
 {
+    /// <summary>
+    /// Prints the series in the original order it was entered.
+    /// Each value is separated by a comma.
+    /// </summary>
     public static void PrintSeries(List<double> series)
     {
         Console.WriteLine("Series (original order):");
@@ -18,6 +35,10 @@ public static class SeriesFunctions
         Console.WriteLine();
     }
 
+    /// <summary>
+    /// Prints the series in reverse order (last to first).
+    /// Each value is separated by a comma.
+    /// </summary>
     public static void PrintReversed(List<double> series)
     {
         Console.WriteLine("Series (reversed):");
@@ -30,6 +51,10 @@ public static class SeriesFunctions
         Console.WriteLine();
     }
 
+    /// <summary>
+    /// Sorts the series in ascending order using Bubble Sort and prints it.
+    /// The original list is not modified.
+    /// </summary>
     public static void PrintSorted(List<double> series)
     {
         List<double> sortedSeries = new List<double>(series); // נעתיק כדי לא לשנות את המקור
@@ -51,6 +76,9 @@ public static class SeriesFunctions
         Console.WriteLine(string.Join(", ", sortedSeries));
     }
 
+    /// <summary>
+    /// Finds and prints the maximum value in the series.
+    /// </summary>
     public static void PrintMax(List<double> series)
     {
         double max = series[0];
@@ -62,6 +90,9 @@ public static class SeriesFunctions
         Console.WriteLine($"Max value: {max}");
     }
 
+    /// <summary>
+    /// Finds and prints the minimum value in the series.
+    /// </summary>
     public static void PrintMin(List<double> series)
     {
         double min = series[0];
@@ -73,6 +104,9 @@ public static class SeriesFunctions
         Console.WriteLine($"Min value: {min}");
     }
 
+    /// <summary>
+    /// Calculates and prints the average (mean) of the series manually.
+    /// </summary>
     public static void PrintAverage(List<double> series)
     {
         double sum = 0;
@@ -84,6 +118,9 @@ public static class SeriesFunctions
         Console.WriteLine($"Average: {average:F2}");
     }
 
+    /// <summary>
+    /// Counts and prints the number of elements in the series manually.
+    /// </summary>
     public static void PrintCount(List<double> series)
     {
         int count = 0;
@@ -94,6 +131,9 @@ public static class SeriesFunctions
         Console.WriteLine($"Number of elements: {count}");
     }
 
+    /// <summary>
+    /// Calculates and prints the total sum of the series manually.
+    /// </summary>
     public static void PrintSum(List<double> series)
     {
         double sum = 0;
